@@ -59,6 +59,6 @@ In the flashloan function, on line 41 there is a check that was performed there.
 
 To make the UnstoppableLender stoppable, all we have to do is to transfer `damnValuableToken` token directly to the contract. thereby we increased the `damnValuableToken` balance of the contract but the `poolBalance` isn't increased. which will cause the flashloan function to always revert because `assert(poolBalance == balanceBefore);` will always return false.
 
-
+here is a link to the solution to the challenge [solution](https://github.com/Ultra-Tech-code/damn-vulnerable-defi/blob/27690b514400f3561bec51e4219c8a41544d550b/test/unstoppable/unstoppable.challenge.js#L43)
 
 
