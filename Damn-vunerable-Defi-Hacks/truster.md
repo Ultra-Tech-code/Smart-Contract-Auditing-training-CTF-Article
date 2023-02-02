@@ -37,10 +37,10 @@ contract TrusterLenderPool is ReentrancyGuard {
 }`
 
 
-In this challenge the vulnerability is with the low level call in the flashloan function.        
+In this challenge the vulnerability is with the low level call in the `flashLoan` function.        
 `        (bool success, ) = target.call(data);
         require(success, "External call failed");`
-With data passed in as parameter, we can put in a malicious code into it and make a cal to it.
+With data passed in as parameter, we can put in a malicious code into it and make a call to it.
 
 here we create a contract to exploit the `TrusterLenderPool` contract
 
